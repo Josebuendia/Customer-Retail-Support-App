@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %> |  RetailApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+     <header class="headSec">
+      <h1>NCI Retail</h1>
+      <p>Customer and cases info</p>
+      
+      <ul>
+        <%# <li><%= link_to "Home",  “#” %><!--</li>-->
+       <%#  <li><%= link_to "About", “#” %><!--</li>-->
+        <%# <li><%= link_to "Help", “#” %><!--</li>-->
+        <%# your_ruby_code %>
+        <% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to "Log Out", logout_path %>
+<% else %>
+  <%= link_to "Sign Up", signup_path %> or 
+  <%= link_to "Log In", login_path %>
+<% end %>
+<p id="notice"><%= notice %></p>
+      </ul>
+      
+      
+    </header>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+
+<footer class="foot">
+<h1>NCI Retail</h1>
+</footer>
+
+
+  <body>
+    <%= yield %>
+  </body>
+</html>
+
+
