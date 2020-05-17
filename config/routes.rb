@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :issues
+  resources :customers
   root 'home#index'
   
   resources :users

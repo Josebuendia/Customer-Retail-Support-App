@@ -10,15 +10,14 @@
   </head>
      <header class="headSec">
       <h1>NCI Retail</h1>
-      <p>Customer and cases info</p>
+      <p> </p>
       
       <ul>
-        <%# <li><%= link_to "Home",  “#” %><!--</li>-->
-       <%#  <li><%= link_to "About", “#” %><!--</li>-->
-        <%# <li><%= link_to "Help", “#” %><!--</li>-->
         <%# your_ruby_code %>
         <% if current_user %>
-  Logged in as <%= current_user.email %>.
+  Logged in as <%= current_user.email %>
+  <li><%= link_to "Customer", customers_path  %></li>
+    <li><%= link_to "Cases", issues_path  %></li>
   <%= link_to "Log Out", logout_path %>
 <% else %>
   <%= link_to "Sign Up", signup_path %> or 

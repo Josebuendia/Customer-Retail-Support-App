@@ -82,3 +82,8 @@ li a {
       width: 100%;
       min-height: 700px;
 }
+
+.table{
+   width: 400;
+   border:  1;
+}
